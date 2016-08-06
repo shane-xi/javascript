@@ -4,7 +4,20 @@ var hasConflict = new Array();
 
 var startx = 0;
 var starty = 0;
-
+var data = {
+    "2" : "小孙子",
+    "4" : "孙子",
+    "8" : "大孙子",
+    "16": "小儿子",
+    "32": "儿子",
+    "64": "大儿子",
+    "128": "小爸爸",
+    "256": "爸爸",
+    "512": "大爸爸",
+    "1024": "王叔叔",
+    "2048": "爷爷",
+    "4096": "大爷爷"
+}
 $(document).ready(function(){
     prepareForMobile();
     newgame();
@@ -79,14 +92,16 @@ function updateBoardView(){
                 theNumberCell.css('left',getPosLeft(i,j));
                 theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
                 theNumberCell.css('color',getNumberColor( board[i][j] ) );
-                theNumberCell.text( board[i][j] );
+                theNumberCell.data("id", board[i][j] );
+                var id =theNumberCell.data('id');
+                theNumberCell.text(data[id]);
             }
 
             hasConflict[i][j] = false;
         }
 
     $('.number-cell').css('line-height',cellSideLength+'px');
-    $('.number-cell').css('font-size',0.6*cellSideLength+'px');
+    $('.number-cell').css('font-size',0.3*cellSideLength+'px');
 }
 //随机生成数字
 function generateOneNumber(){

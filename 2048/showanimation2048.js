@@ -4,7 +4,9 @@ function showNumberWithAnimation( i , j , randNumber ){
 
     numberCell.css('background-color',getNumberBackgroundColor( randNumber ) );
     numberCell.css('color',getNumberColor( randNumber ) );
-    numberCell.text( randNumber );
+    numberCell.data("id", board[i][j] );
+    var id =numberCell.data('id');
+    numberCell.text(data[id]);
 
     numberCell.animate({
         width:cellSideLength,
