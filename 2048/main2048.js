@@ -293,7 +293,7 @@ document.addEventListener("touchend",function(){
 
         if( deltax > 0 ){
             //move right
-            if(canMoveLeft(board)){
+            if(canMoveRight(board)){
                 moveRight();
                 setTimeout(generateOneNumber(),300);
                 setTimeout(updateBoardView(),200);
