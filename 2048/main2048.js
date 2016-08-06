@@ -275,9 +275,9 @@ document.addEventListener("touchstart",function(){
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
 });
-document.addEventListener("touchmove",function (e) {
+/*document.addEventListener("touchmove",function (e) {
     e.preventDefault();
-})
+})*/
 document.addEventListener("touchend",function(){
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
