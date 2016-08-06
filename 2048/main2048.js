@@ -286,7 +286,9 @@ document.addEventListener("touchend",function(){
 
     if( Math.abs( deltax ) < 0.1*documentWidth && Math.abs( deltay ) < 0.1*documentWidth )
         return;
-
+    var containerY = $('#grid-container').offset().top;
+    if(containerY>=starty)
+        return;
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
 
         if( deltax > 0 ){
