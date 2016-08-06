@@ -299,14 +299,16 @@ document.addEventListener("touchend",function(){
     var deltax = endx - startx;
     var deltay = endy - starty;
 
-    if( Math.abs( deltax ) < 0.3*documentWidth && Math.abs( deltay ) < 0.3*documentWidth )
+    if( Math.abs( deltax ) < 0.1*documentWidth && Math.abs( deltay ) < 0.1*documentWidth )
         return;
-
+    var containerY = $('#grid-container').offset().top;
+    if(containerY>=starty)
+        return;
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
 
         if( deltax > 0 ){
             //move right
-            if(canMoveLeft(board)){
+            if(canMoveRight(board)){
                 moveRight();
                 setTimeout(generateOneNumber(),300);
                 setTimeout(updateBoardView(),200);
