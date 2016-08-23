@@ -1,0 +1,12 @@
+function DayOfYear(year, month ,day ) {
+	var Month = [31,28,31,30,31,30,31,31,30,31,30,31];
+	if (year/100 == parseInt(year/100)){
+		 Month[1] =29；
+	} else if (year/4 == parseInt(year/4) ){
+			Month[1] =29；
+		}
+	var tianshu =0;	
+	for (var i= 0;i<month;i++) {
+		tianshu += Month[i]+day;
+	}
+}
