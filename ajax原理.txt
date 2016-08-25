@@ -24,9 +24,9 @@ Ajax相关知识
 
 200：成功
 304：资源没有更新，直接使用缓存中资源
-415: 数据格式  json
-505: Http请求格式错误
-
+415: 数据格式  json   客户端数据问题
+505: Http请求格式错误   服务器错误
+ 
 GET请求：  url末尾添加查询信息，需要用encodeURIComponent()进行编码
 POST请求： 必须设置表单提交过了的类型
 		  xhr.setRequestHeader("content-Type","application/x-www-form-urlencoded");
