@@ -19,7 +19,7 @@ define(['widget','jquery','jqueryUI'],function(widget,$,$UI){
 			text4PromptBtn:'确定',
 			isPromptInputPassword:false,
 			defaultValue4PromptInput:false,
-			maxlength4PromptInput:10,
+			maxlength4PromptInput:30,
 			handler4PromptBtn:null
 		};
 	}

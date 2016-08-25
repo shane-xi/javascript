@@ -18,6 +18,7 @@
 	top:100px;
 	box-shadow: 0 0 12px #888;
 	background: #fff;
+	z-index: 0.2;
 }
 
 .window_mask{

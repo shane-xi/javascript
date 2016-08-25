@@ -22,13 +22,13 @@ require(['jquery','window'],function($,w){
 			text4AlertBtn:'OK',
 			dragHandle:'.window_header',
 			skinClassName:'window_skin_a',
-			// handler4AlertBtn:function(){
-			// 	alert('你点击了确定按钮');
-			// },
-			// handler4CloseBtn:function(){
-			// 	alert('你点击了关闭按钮');
-			// }
-		}).on('alert',function(){
+			handler4AlertBtn:function(){
+				alert('你点击了确定按钮');
+			 },
+			handler4CloseBtn:function(){
+				alert('你点击了关闭按钮');
+			}
+		})/*.on('alert',function(){
 			alert('你点击了确定按钮')
 		}).on('alert',function(){
 			alert('确定按钮第二次回调')
@@ -38,6 +38,6 @@ require(['jquery','window'],function($,w){
 			alert('第一次点击了关闭按钮')
 		}).on('close',function(){
 			alert('关闭按钮第二次回调')
-		});
+		})*/;
 	});
 });

@@ -21,8 +21,8 @@ define(['widget','jquery','jqueryUI'],function(widget,$,$UI){
 
 	Window.prototype = $.extend({},new widget.Widget(),{
 		alert:function(cfg){
-			var CFG = $.extend(this.cfg,cfg),
-			    boudingBox = $(
+			var CFG = $.extend(this.cfg,cfg);
+			var    boudingBox = $(
 			    	'<div class="window_boundingBox">'+
 			    		'<div class="window_header">'+CFG.title+'</div>'+
 			    		'<div class="window_body">'+CFG.content+'</div>'+
