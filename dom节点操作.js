@@ -19,3 +19,7 @@ hasChildnodes
 
 JQ
 清空节点  empty()
+
+css3  transition 过渡
+	  transform  变换
+	  animation  动画

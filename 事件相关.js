@@ -1,5 +1,5 @@
-addEventListener()
-removeEventListener()
+addEventListener()    触发    dispatch  $ trigger()
+removeEventListener() 
 attachEvent()
 detachEvent()
 
@@ -15,3 +15,7 @@ type
 srcElement 
 e.cancelBubble();
 e.returnValue = false;
+
+事件代理
+1、可以大量节省内存占用，减少事件注册，比如在table上代理所有td的click事件就非常棒
+2、可以实现当新增子对象时无需再次对其绑定事件，对于动态内容部分尤为合适

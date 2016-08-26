@@ -19,12 +19,12 @@ Object.prototype.DeepClone = function () {
 	for(attr in this) {
 		if(this.hasOwnProperty(attr)){//首先复制的是对象上的属性而不是其原型上的
 			if(typeof(this[attr] === "object")){
-				if (toString.call(this[attr] === '[object Array]')){//判断是不是数组
+				if (toString.call(this[attr]) === '[object Array]'){//判断是不是数组
 					obj[attr] = []; 					//创建一个新的数组深复制里面的属性
 					for(i=0;i<this[attr].length;i++){
 						obj[attr].push(this[attr][i].DeepClone())
 					}
-				} else if(toString.call(this[attr] === '[object Object]')){
+				} else if(toString.call(this[attr]) === '[object Object]'){
 					obj[attr] = this[attr].DeepCopy();//是对象，直接深复制
 				} else if (this[attr] === null) {
 					obj[attr] = null;
