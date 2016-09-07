@@ -11,6 +11,7 @@ function bindd (fun , context) {
 [].slice.call(arguments)
 Array.prototype.slice.call(arguments);
 为什么要用slice而不用其他的数组方法
+slice 返回值是数组 
 
 
 

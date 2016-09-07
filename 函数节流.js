@@ -2,6 +2,7 @@
 目的： 使某些代码不可以在没有间断的情况下连续重复执行，特别是会造成重排的
 //让一个函数无法在短时间内连续调用，比如ajax提交文本信息验证时；
 //缩放，滚动屏幕时
+Array.prototype.slice.call(arguments)
 function throttle (method,delay) {
 	var timer = null;//通过闭包构造私有作用域存放定时器变量
 	return function () {
