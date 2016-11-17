@@ -32,7 +32,7 @@ var  o =new Object(); Person.call(o,"wuxi","20","IT");o.sayname();在另外一�
 构造函数中的new出来的不同的实例中的方法是不同的函数；
 *补充：安全模式   防止忘记写new来创建对象
 	function Person (name) {
-		if(this instanceof Person) {
+		if(this instanceof Person) {  //判断this是否是Person的一个实例
 			this.name = name;
 		} else {
 			retrun new Person(name);
